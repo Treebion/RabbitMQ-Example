@@ -59,15 +59,31 @@ namespace RabbitMQ.Producer
             Console.WriteLine("Enter message:");
             string message = Console.ReadLine()!;
 
-            Console.WriteLine("Enter type:");
-            string type = Console.ReadLine()!;
+            MessageType? type = null!;
+
+            while (!type.HasValue)
+            {
+                Console.WriteLine("Enter type:");
+                Console.WriteLine("A:\tEmail");
+                Console.WriteLine("B:\tSMS");
+                Console.WriteLine("C:\tPush");
+                string typeAsString = Console.ReadLine()!;
+
+                switch (typeAsString.ToLower())
+                {
+                    case "a": type = MessageType.Email; break;
+                    case "b": type = MessageType.SMS; break;
+                    case "c": type = MessageType.Push; break;
+                    default: break;
+                }
+            }
 
             var notification = new NotificationMessage
             {
                 Id = Guid.NewGuid(),
                 Recipient = recipient,
                 Message = message,
-                Type = type
+                Type = type.Value
             };
 
             var endpoint = await busControl.GetSendEndpoint(new Uri($"queue:NotificationQueue"));

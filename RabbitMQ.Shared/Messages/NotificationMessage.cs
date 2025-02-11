@@ -23,5 +23,26 @@ public sealed record NotificationMessage
     /// <summary>
     /// Gets the type of the notification message.
     /// </summary>
-    public string Type { get; init; }
+    public MessageType Type { get; init; }
+}
+
+/// <summary>
+/// Specifies the type of the notification message.
+/// </summary>
+public enum MessageType
+{
+    /// <summary>
+    /// Represents an email message.
+    /// </summary>
+    Email,
+
+    /// <summary>
+    /// Represents an SMS message.
+    /// </summary>
+    SMS,
+
+    /// <summary>
+    /// Represents a push notification message.
+    /// </summary>
+    Push
 }

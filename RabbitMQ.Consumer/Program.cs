@@ -9,7 +9,7 @@ namespace RabbitMQ.Consumer;
 /// The main entry point for the RabbitMQ consumer application.
 /// </summary>
 public class Program
-{
+{    
     /// <summary>
     /// The main method to start the RabbitMQ consumer.
     /// </summary>
@@ -29,6 +29,7 @@ public class Program
             c.ReceiveEndpoint("NotificationQueue", e =>
             {
                 e.Consumer<NotificationConsumer>();
+                e.UseMessageRetry(r => r.Interval(3, TimeSpan.FromSeconds(10)));
             });
         });
 
