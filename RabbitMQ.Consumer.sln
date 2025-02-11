@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Consumer", "RabbitMQ.Consumer\RabbitMQ.Consumer.csproj", "{AF9D1819-A875-438C-A020-CE88D244DAB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Producer", "RabbitMQ.Producer\RabbitMQ.Producer.csproj", "{61995459-3418-48B9-BE76-4C24996027F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.Shared", "RabbitMQ.Messages\RabbitMQ.Shared.csproj", "{6F81E053-CFE2-4A28-B085-F9CC7322CF49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF9D1819-A875-438C-A020-CE88D244DAB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9D1819-A875-438C-A020-CE88D244DAB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9D1819-A875-438C-A020-CE88D244DAB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9D1819-A875-438C-A020-CE88D244DAB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61995459-3418-48B9-BE76-4C24996027F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61995459-3418-48B9-BE76-4C24996027F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61995459-3418-48B9-BE76-4C24996027F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61995459-3418-48B9-BE76-4C24996027F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F81E053-CFE2-4A28-B085-F9CC7322CF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F81E053-CFE2-4A28-B085-F9CC7322CF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F81E053-CFE2-4A28-B085-F9CC7322CF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F81E053-CFE2-4A28-B085-F9CC7322CF49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
